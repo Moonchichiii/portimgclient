@@ -1,0 +1,68 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .brandLink {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .link:hover {
+    color: #0056b3;
+  }
+  
+  .button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  /* Mobile-first styles */
+  @media (max-width: 600px) {
+    .nav {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  
+  /* Tablet and larger devices */
+  @media (min-width: 600px) {
+    .nav {
+      flex-direction: row;
+    }
+  }
+  
