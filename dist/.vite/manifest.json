@@ -1,6 +1,6 @@
 {
   "src/auth/Login.jsx": {
-    "file": "assets/Login-D7_Maxnb.js",
+    "file": "assets/Login-D4cQLO_G.js",
     "name": "Login",
     "src": "src/auth/Login.jsx",
     "isDynamicEntry": true,
@@ -9,7 +9,7 @@
     ]
   },
   "src/auth/Register.jsx": {
-    "file": "assets/Register-XpiE849B.js",
+    "file": "assets/Register-CWfA_Zre.js",
     "name": "Register",
     "src": "src/auth/Register.jsx",
     "isDynamicEntry": true,
@@ -18,7 +18,7 @@
     ]
   },
   "src/main.jsx": {
-    "file": "assets/main-Bn2dRHyP.js",
+    "file": "assets/main-Bn22BZz-.js",
     "name": "main",
     "src": "src/main.jsx",
     "isEntry": true,
@@ -37,7 +37,7 @@
     ]
   },
   "src/pages/about/About.jsx": {
-    "file": "assets/About-DtiDbsmA.js",
+    "file": "assets/About-h6_n4bGB.js",
     "name": "About",
     "src": "src/pages/about/About.jsx",
     "isDynamicEntry": true,
@@ -46,7 +46,7 @@
     ]
   },
   "src/pages/blog/Blog.jsx": {
-    "file": "assets/Blog-B9bs06G3.js",
+    "file": "assets/Blog-DMJGXAF3.js",
     "name": "Blog",
     "src": "src/pages/blog/Blog.jsx",
     "isDynamicEntry": true,
@@ -55,7 +55,7 @@
     ]
   },
   "src/pages/dashboard/Dashboard.jsx": {
-    "file": "assets/Dashboard-ClLozGfz.js",
+    "file": "assets/Dashboard-jol9A0wK.js",
     "name": "Dashboard",
     "src": "src/pages/dashboard/Dashboard.jsx",
     "isDynamicEntry": true,
@@ -64,7 +64,7 @@
     ]
   },
   "src/pages/home/Home.jsx": {
-    "file": "assets/Home-wSUQKn-R.js",
+    "file": "assets/Home-CYt1p5Wi.js",
     "name": "Home",
     "src": "src/pages/home/Home.jsx",
     "isDynamicEntry": true,
@@ -73,7 +73,7 @@
     ]
   },
   "src/pages/notfound/NotFound.jsx": {
-    "file": "assets/NotFound-D89iosGk.js",
+    "file": "assets/NotFound-aVRWdhIH.js",
     "name": "NotFound",
     "src": "src/pages/notfound/NotFound.jsx",
     "isDynamicEntry": true,
@@ -82,7 +82,7 @@
     ]
   },
   "src/pages/portfolio/Portfolio.jsx": {
-    "file": "assets/Portfolio-CqqXgXKz.js",
+    "file": "assets/Portfolio-IwK-_f_Q.js",
     "name": "Portfolio",
     "src": "src/pages/portfolio/Portfolio.jsx",
     "isDynamicEntry": true,
