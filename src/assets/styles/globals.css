@@ -1,11 +1,12 @@
 :root {
     --main-background-color: rgb(181,181,181);
     --main-gradient: linear-gradient(90deg, rgba(181,181,181,1) 0%, rgba(189,189,194,1) 35%, rgba(207,207,207,1) 100%);
-    --primary-color: #007bff;
-    --secondary-color: #e0e0e0;
-    --accent-color: #007bff;
+    --primary-color: #FF5733; /* Vibrant orange */
+    --secondary-color: #C70039; /* Vibrant red */
+    --accent-color: #FFC300; /* Bright yellow */
     --font-family: 'Arial, sans-serif';
     --border-radius: 8px;
+    --error-color: #FF0000; /* Red for errors */
 }
 
 html, body {

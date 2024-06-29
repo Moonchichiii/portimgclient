@@ -1,24 +1,37 @@
 {
+  "_auth.module-!~{00a}~.js": {
+    "file": "assets/auth-BWMcDuwm.css",
+    "src": "_auth.module-!~{00a}~.js"
+  },
+  "_auth.module-Ccx0cjAW.js": {
+    "file": "assets/auth.module-Ccx0cjAW.js",
+    "name": "auth.module",
+    "css": [
+      "assets/auth-BWMcDuwm.css"
+    ]
+  },
   "src/auth/Login.jsx": {
-    "file": "assets/Login-Bq1s4xtd.js",
+    "file": "assets/Login-CGhuCjl2.js",
     "name": "Login",
     "src": "src/auth/Login.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "src/main.jsx"
+      "src/main.jsx",
+      "_auth.module-Ccx0cjAW.js"
     ]
   },
   "src/auth/Register.jsx": {
-    "file": "assets/Register-Dm00QnQ1.js",
+    "file": "assets/Register-BO-MstI4.js",
     "name": "Register",
     "src": "src/auth/Register.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "src/main.jsx"
+      "src/main.jsx",
+      "_auth.module-Ccx0cjAW.js"
     ]
   },
   "src/main.jsx": {
-    "file": "assets/main-dr_EL3px.js",
+    "file": "assets/main-qTYl2sHJ.js",
     "name": "main",
     "src": "src/main.jsx",
     "isEntry": true,
@@ -33,11 +46,11 @@
       "src/pages/notfound/NotFound.jsx"
     ],
     "css": [
-      "assets/main-CfWQhhsT.css"
+      "assets/main-BXmNK6W2.css"
     ]
   },
   "src/pages/about/About.jsx": {
-    "file": "assets/About-CbhcVrwH.js",
+    "file": "assets/About-CoyYoaT9.js",
     "name": "About",
     "src": "src/pages/about/About.jsx",
     "isDynamicEntry": true,
@@ -46,7 +59,7 @@
     ]
   },
   "src/pages/blog/Blog.jsx": {
-    "file": "assets/Blog-duppYfaq.js",
+    "file": "assets/Blog-C4Cy-fJX.js",
     "name": "Blog",
     "src": "src/pages/blog/Blog.jsx",
     "isDynamicEntry": true,
@@ -55,7 +68,7 @@
     ]
   },
   "src/pages/dashboard/Dashboard.jsx": {
-    "file": "assets/Dashboard-BceWOkGV.js",
+    "file": "assets/Dashboard-DelLU-7I.js",
     "name": "Dashboard",
     "src": "src/pages/dashboard/Dashboard.jsx",
     "isDynamicEntry": true,
@@ -64,7 +77,7 @@
     ]
   },
   "src/pages/home/Home.jsx": {
-    "file": "assets/Home-BIX7GxSV.js",
+    "file": "assets/Home-89uYfstU.js",
     "name": "Home",
     "src": "src/pages/home/Home.jsx",
     "isDynamicEntry": true,
@@ -73,7 +86,7 @@
     ]
   },
   "src/pages/notfound/NotFound.jsx": {
-    "file": "assets/NotFound-CnAfRYiL.js",
+    "file": "assets/NotFound-BdzloDrt.js",
     "name": "NotFound",
     "src": "src/pages/notfound/NotFound.jsx",
     "isDynamicEntry": true,
@@ -82,7 +95,7 @@
     ]
   },
   "src/pages/portfolio/Portfolio.jsx": {
-    "file": "assets/Portfolio-BP26LeEP.js",
+    "file": "assets/Portfolio-DEvmHDUO.js",
     "name": "Portfolio",
     "src": "src/pages/portfolio/Portfolio.jsx",
     "isDynamicEntry": true,

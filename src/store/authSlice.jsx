@@ -52,9 +52,12 @@ const authSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+      // CSRF Token
       .addCase(fetchCsrfToken.fulfilled, (state, action) => {
         state.csrfToken = action.payload.csrfToken;
       })
+
+      // Login
       .addCase(loginUser.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -62,11 +65,14 @@ const authSlice = createSlice({
       .addCase(loginUser.fulfilled, (state, action) => {
         state.loading = false;
         state.user = action.payload.user;
+        document.cookie = `access_token=${action.payload.access_token}; httponly`;
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       })
+
+      // Register
       .addCase(registerUser.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -74,20 +80,28 @@ const authSlice = createSlice({
       .addCase(registerUser.fulfilled, (state, action) => {
         state.loading = false;
         state.user = action.payload.user;
+        document.cookie = `access_token=${action.payload.access_token}; httponly`;
       })
       .addCase(registerUser.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       })
+
+      // Logout
       .addCase(logoutUser.fulfilled, (state) => {
         state.user = null;
+        document.cookie = 'access_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
       })
+
+      // Refresh Token
       .addCase(refreshToken.fulfilled, (state, action) => {
         document.cookie = `access_token=${action.payload.access}; httponly`;
       })
       .addCase(refreshToken.rejected, (state) => {
         state.user = null;
       })
+
+      // Fetch Current User
       .addCase(fetchCurrentUser.fulfilled, (state, action) => {
         state.user = action.payload;
         state.initialized = true;
