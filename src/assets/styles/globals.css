@@ -6,8 +6,15 @@
     --accent3: #1A936F;
     --background-color: #F7F7F7;
     --text-color: #333333;
-    --link-color:#333;
-    --link-color-hover:#FF6B6B;
+    --link-color: #333;
+    --link-color-hover: #FF6B6B;
+  
+    --button-color: #FFD93D;
+    --button-text-color: #333;
+    --button-color-hover: #F7F7F7;
+    --button-border-color-hover: #1A936F;
+    --button-color-text-hover: #6A4C93;
+  
     --heading-font: 'Montserrat', sans-serif;
     --body-font: 'Merriweather', serif;
     --border-radius: 10px; 
@@ -59,4 +66,23 @@
       gap: 1rem;
     }
   }
+  .button {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem; 
+    font-size: 1.35rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    text-align: center;
+  }
   
+  .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--button-color-hover);
+    color: var(--button-color-text-hover);
+    border: 1px solid var(--button-border-color-hover); 
+  }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutUser } from '../../store/authSlice';
 import styles from './Header.module.css';
@@ -7,9 +7,14 @@ import styles from './Header.module.css';
 const Header = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     dispatch(logoutUser());
+  };
+
+  const handleNavigate = (path) => {
+    navigate(path);
   };
 
   return (
@@ -29,8 +34,8 @@ const Header = () => {
           </>
         ) : (
           <>
-            <Link className={`${styles.link} ${styles.button}`} to="/login">Sign in</Link>
-            <Link className={`${styles.link} ${styles.button}`} to="/register">Sign up</Link>
+            <button className={styles.button} onClick={() => handleNavigate('/login')}>Sign in</button>
+            <button className={styles.button} onClick={() => handleNavigate('/register')}>Sign up</button>
           </>
         )}
       </nav>
@@ -39,3 +44,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

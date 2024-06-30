@@ -28,30 +28,32 @@
 }
 
 .link {
-  
+  color: var(--link-color);
   text-decoration: none;
   font-weight: 500;
+  font-size: 1.35rem;
   transition: color 0.3s;
 }
 
 .link:hover, .link:focus {
-  
+  color: var(--link-color-hover);
 }
 
 .button {
-  background-color: #007bff;
-  color: white;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   text-align: center;
 }
 
 .button:hover {
-  background-color: #0056b3;
-  color: white;
+  background-color: var(--button-color-hover);
+  color: var(--button-color-text-hover);
+  border: 1px solid var(--button-border-color-hover);
 }
 
 /* Mobile-first styles */
