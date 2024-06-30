@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser } from '../store/authSlice';
+import { loginUser, fetchCurrentUser } from '../store/authSlice';
 import { Navigate } from 'react-router-dom';
 import styles from './auth.module.css';
 
@@ -12,7 +12,9 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(loginUser({ username, password }));
+    dispatch(loginUser({ username, password })).then(() => {
+      dispatch(fetchCurrentUser());
+    });
   };
 
   if (user) {

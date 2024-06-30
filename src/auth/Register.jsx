@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { registerUser } from '../store/authSlice';
+import { registerUser, fetchCurrentUser } from '../store/authSlice';
 import { Navigate } from 'react-router-dom';
 import styles from './auth.module.css';
 
@@ -13,7 +13,9 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(registerUser({ username, email, password }));
+    dispatch(registerUser({ username, email, password })).then(() => {
+      dispatch(fetchCurrentUser());
+    });
   };
 
   if (user) {

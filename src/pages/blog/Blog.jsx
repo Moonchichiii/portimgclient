@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPosts } from '../../store/blogSlice';
 import Loader from '../../components/common/Loader';
+import styles from './blog.module.css';
 
 const BlogPage = () => {
   const dispatch = useDispatch();
@@ -20,14 +21,16 @@ const BlogPage = () => {
   }
 
   return (
-    <div>
+    <div className={styles.blogPage}>
       <h1>Blog</h1>
-      {posts.map((post) => (
-        <div key={post.id}>
-          <h2>{post.title}</h2>
-          <p>{post.content}</p>
-        </div>
-      ))}
+      <div className={styles.blogPreview}>
+        {posts.map((post) => (
+          <div className={styles.blogCard} key={post.id}>
+            <h2>{post.title}</h2>
+            <p>{post.content}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
