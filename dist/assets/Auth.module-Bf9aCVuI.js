@@ -1,0 +1,1 @@
+const o="_formContainer_3ahs4_1",t="_customForm_3ahs4_35",r="_button_3ahs4_71",s="_switchForm_3ahs4_129",_={formContainer:o,customForm:t,"form-group":"_form-group_3ahs4_35","form-control":"_form-control_3ahs4_43",button:r,"text-danger":"_text-danger_3ahs4_113",switchForm:s};export{_ as s};

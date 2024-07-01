@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProfiles } from '../store/profileSlice';
-import { fetchPosts } from '../store/postSlice';
-import { fetchNotifications } from '../store/notificationSlice';
-import Profile from '../components/profile/Profile';
-import Posts from '../components/posts/Posts';
-import Followers from '../components/followers/Followers';
-import Notifications from '../components/notifications/Notifications';
+import { fetchProfiles } from '../../store/profileSlice';
+import { fetchPosts } from '../../store/postSlice';
+import { fetchNotifications } from '../../store/notificationSlice';
+import Profile from '../../components/profile/Profile';
+import Posts from '../../components/posts/Posts';
+import Followers from '../../components/followers/Followers';
+import Notifications from '../../components/notifications/Notifications';
 
 const Dashboard = () => {
   const dispatch = useDispatch();
