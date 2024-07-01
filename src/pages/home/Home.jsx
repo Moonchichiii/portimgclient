@@ -11,11 +11,11 @@ const HomePage = () => {
           <div className={styles.shape + ' ' + styles.triangle}></div>
         </div>
         <div className={styles.container}>
-          <h1 className={styles.animatedText}>Welcome to My Folio</h1>
+          <h1 className={styles.animatedText}>Portfolio Blog</h1>
           <p className={styles.subtitle}>Explore my projects and blog posts</p>
-          <button className={styles.ctaButton}>View Projects</button>
+          <button className={styles.ctaButton}>Get Started</button>
         </div>
-      </section>
+      </section>      
     </div>
   );
 };
