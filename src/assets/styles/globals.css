@@ -1,46 +1,43 @@
 :root {
     --primary-color: #FF6B6B;
     --secondary-color: #4ECDC4;
-    --accent1: #FFD93D;
-    --accent2: #6A4C93;
-    --accent3: #1A936F;
+    --text-color-on-different-background-or-on-different-pages: #FFD93D;
+    --text-color-on-different-background-or-on-different-pages: #6A4C93;
+    --text-color-on-different-background-or-on-different-pages: #1A936F;
     --background-color: #F7F7F7;
     --text-color: #333333;
     --link-color: #333;
     --link-color-hover: #FF6B6B;
-  
-    --button-color: #FFD93D;
-    --button-text-color: #333;
+    --alert: #FF6B6B;
+    --button-color: #6A4C93;
+    --button-text-color: #FFFFFF;
     --button-color-hover: #F7F7F7;
     --button-border-color-hover: #1A936F;
-    --button-color-text-hover: #6A4C93;
-  
+    --button-color-text-hover: #333;
     --heading-font: 'Montserrat', sans-serif;
     --body-font: 'Merriweather', serif;
-    --border-radius: 10px;
-  }
-  
-  body, html {
+    --border-radius: 12px;
+    --container-padding: 2rem;
+}
+
+
+
+
+body, html {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: var(--body-font);
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    background-color: var(--background-color);
-  }
-  
-  .loading-spinner {
+}
+
+.loading-spinner {
     position: fixed;
     top: 0;
     left: 0;
@@ -51,40 +48,48 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2050;
-  }
-  
-  @media (max-width: 600px) {
-    .container {
-      padding: 1rem;
-    }
-  }
-  
-  @container (min-width: 600px) {
-    .container {
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-  }
-  
-  .button {
+}
+
+.button {
     background-color: var(--button-color);
     color: var(--button-text-color);
     border: 1px solid transparent;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     max-width: fit-content;
-    border-radius: var(--border-radius);
-    font-size: 1.2rem;
-    font-weight: 600;
+    border-radius: 50px; /* Pill shape */
+    font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     background-color: var(--button-color-hover);
     color: var(--button-color-text-hover);
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 1px solid var(--button-border-color-hover);
-  }
-  
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+}

@@ -1,47 +1,83 @@
-.form-container {
-    max-width: 500px;
+.formContainer {
+    padding: var(--container-padding);
     margin: 0 auto;
-    padding: 2rem;
-    background: var(--main-background-color);
+    max-width: 400px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
     border-radius: var(--border-radius);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-container h2 {
+}
+
+.formContainer h2 {
     margin-bottom: 1.5rem;
     color: var(--primary-color);
     text-align: center;
-  }
-  
-  .form-group {
+}
+
+.customForm .form-group {
     margin-bottom: 1rem;
-  }
-  
-  .form-group input {
+}
+
+.customForm .form-control {
     width: 100%;
     padding: 0.75rem;
     border-radius: var(--border-radius);
     border: 1px solid var(--secondary-color);
     font-size: 1rem;
-  }
-  
-  .form-group input:focus {
+}
+
+.customForm .form-control:focus {
     border-color: var(--primary-color);
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-  
-  button {
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+.button {
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
     margin-top: 1rem;
-  }
-  
-  .error-message {
-    color: red;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--button-color-hover);
+    color: var(--button-color-text-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--button-border-color-hover);
+}
+
+.text-danger {
+    color: var(--alert);
     font-size: 0.875rem;
     margin-top: 0.5rem;
     text-align: center;
-  }
-  
+}
+
+@media (max-width: 768px) {
+    .formContainer {
+        padding: 1rem;
+        max-width: 300px;
+    }
+
+    .formContainer h2 {
+        font-size: 1.5rem;
+    }
+
+    .customForm .form-control {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}

@@ -1,9 +1,35 @@
 .pageContainer {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: var(--body-font);
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.skillsList, .experienceList, .hobbiesList {
+  list-style: none;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 1rem;
   }
-  
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p, li {
+    font-size: 1rem;
+  }
+}

@@ -1,41 +1,17 @@
 .mainContainer {
-    padding: 2rem;
+    padding: var(--container-padding);
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    /* max-width: 1200px; */
+    max-width: 1200px;
     margin: 2rem auto;    
     flex-grow: 1;
     background-color: var(--background-color);
-  }
-  
-  .mainContent {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    flex-grow: 1;
-    min-height: 100vh;
-    background-color: var(--background-color);
-  }
-  
-  .childBlock {
-    background: #f0f0f0;
-    padding: 1.5rem;
-    border-radius: var(--border-radius);
-    transition: transform 0.3s, background-color 0.3s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .childBlock:hover {
-    transform: scale(0.98);
-    background-color: var(--secondary-color);
-  }
-  
-  @media (max-width: 800px) {
-    .childBlock:hover {
-      transform: scale(1);
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        padding: 1rem;
+        margin: 1rem auto;
     }
-  }
-  
+}

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { registerUser, fetchCurrentUser } from '../store/authSlice';
 import { Navigate } from 'react-router-dom';
-import styles from './auth.module.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from './Auth.module.css';
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -23,37 +24,52 @@ const Register = () => {
   }
 
   return (
-    <div className={styles['form-container']}>
+    <div className={styles.formContainer}>
       <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <div className={styles['form-group']}>
+      <form onSubmit={handleSubmit} className={styles.customForm}>
+        <div className="form-group">
+          <label htmlFor="username">Username</label>
           <input
             type="text"
-            placeholder="Username"
+            id="username"
+            className="form-control"
+            placeholder="Enter username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            autoComplete="username"
+            required
           />
         </div>
-        <div className={styles['form-group']}>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
           <input
             type="email"
-            placeholder="Email"
+            id="email"
+            className="form-control"
+            placeholder="Enter email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            autoComplete="email"
+            required
           />
         </div>
-        <div className={styles['form-group']}>
+        <div className="form-group">
+          <label htmlFor="password">Password</label>
           <input
             type="password"
-            placeholder="Password"
+            id="password"
+            className="form-control"
+            placeholder="Enter password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            autoComplete="new-password"
+            required
           />
         </div>
-        <button type="submit" disabled={loading}>
+        <button type="submit" className={`${styles.button} btn btn-primary mt-3`} disabled={loading}>
           {loading ? 'Registering...' : 'Register'}
         </button>
-        {error && <p className={styles['error-message']}>{error}</p>}
+        {error && <p className="text-danger mt-3">{error}</p>}
       </form>
     </div>
   );
