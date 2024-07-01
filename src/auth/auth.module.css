@@ -1,6 +1,7 @@
 .formContainer {
     padding: var(--container-padding);
     margin: 0 auto;
+    margin-top: 5rem;
     max-width: 400px;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -10,8 +11,7 @@
 }
 
 .formContainer h2 {
-    margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    margin-bottom: 1.5rem;    
     text-align: center;
 }
 
@@ -60,6 +60,25 @@
     margin-top: 0.5rem;
     text-align: center;
 }
+
+
+.switchForm {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .switchForm p {
+    margin: 0;
+  }
+  
+  .switchForm a {
+    color: var(--link-color);
+    text-decoration: underline;
+  }
+  
+  .switchForm a:hover, .switchForm a:focus {
+    color: var(--link-color-hover);
+  }
 
 @media (max-width: 768px) {
     .formContainer {

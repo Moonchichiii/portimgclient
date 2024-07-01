@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutUser } from '../../store/authSlice';
+import { scroller } from 'react-scroll';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -23,12 +24,30 @@ const Header = () => {
     handleClose();
   };
 
+  const handleScrollLink = (to) => {
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        scroller.scrollTo(to, {
+          smooth: true,
+          duration: 500,
+        });
+      }, 100);
+    } else {
+      scroller.scrollTo(to, {
+        smooth: true,
+        duration: 500,
+      });
+    }
+    handleClose();
+  };
+
   const NavLinks = () => (
     <>
       <Link className={styles.link} to="/" onClick={handleClose} tabIndex="0" aria-label="Home">Home</Link>
-      <Link className={styles.link} to="/about" onClick={handleClose} tabIndex="0" aria-label="About">About</Link>
-      <Link className={styles.link} to="/blog" onClick={handleClose} tabIndex="0" aria-label="Blog">Blog</Link>
-      <Link className={styles.link} to="/portfolio" onClick={handleClose} tabIndex="0" aria-label="Portfolio">Portfolio</Link>
+      <span className={styles.link} onClick={() => handleScrollLink('about')} tabIndex="0" aria-label="About">About</span>
+      <span className={styles.link} onClick={() => handleScrollLink('blog')} tabIndex="0" aria-label="Blog">Blog</span>
+      <span className={styles.link} onClick={() => handleScrollLink('portfolio')} tabIndex="0" aria-label="Portfolio">Portfolio</span>
       {user ? (
         <>
           <Link className={styles.link} to="/dashboard" onClick={handleClose} tabIndex="0" aria-label="Dashboard">Dashboard</Link>

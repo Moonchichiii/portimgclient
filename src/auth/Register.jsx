@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { Link, Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { registerUser, fetchCurrentUser } from '../store/authSlice';
-import { Navigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './Auth.module.css';
 
@@ -71,6 +71,9 @@ const Register = () => {
         </button>
         {error && <p className="text-danger mt-3">{error}</p>}
       </form>
+      <div className={styles.switchForm}>
+        <p>Already have an account? <Link to="/login">Sign in here!</Link></p>
+      </div>
     </div>
   );
 };
